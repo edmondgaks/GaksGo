@@ -7,7 +7,7 @@ const inter = Nunito({ subsets: ['latin'] })
 export default function Home() {
   return (
         <>
-        <Navbar />
+        
         </>
   )
 }
