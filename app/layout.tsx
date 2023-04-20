@@ -1,6 +1,8 @@
 import { Nunito } from 'next/font/google'
 import Navbar from './components/Navbar/Navbar'
 import './globals.css'
+import ClientOnly from './components/ClientOnly'
+import Modal from './components/models/Modal'
 
 export const metadata = {
   title: 'GaksGo',
@@ -17,7 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
+        <ClientOnly>
+          <Modal isOpen />
+          <Navbar />
+        </ClientOnly>
         {children}
         </body>
     </html>
