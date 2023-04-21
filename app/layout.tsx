@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar'
 import './globals.css'
 import ClientOnly from './components/ClientOnly'
 import Modal from './components/models/Modal'
+import RegisterModal from './components/models/RegisterModal'
 
 export const metadata = {
   title: 'GaksGo',
@@ -20,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ClientOnly>
-          <Modal title="Login" isOpen />
+          <RegisterModal />
           <Navbar />
         </ClientOnly>
         {children}
