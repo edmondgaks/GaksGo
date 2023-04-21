@@ -4,6 +4,7 @@ import './globals.css'
 import ClientOnly from './components/ClientOnly'
 import Modal from './components/models/Modal'
 import RegisterModal from './components/models/RegisterModal'
+import ToasterProvider from './providers/ToasterProvider'
 
 export const metadata = {
   title: 'GaksGo',
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ClientOnly>
+          <ToasterProvider />
           <RegisterModal />
           <Navbar />
         </ClientOnly>
